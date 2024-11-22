@@ -1,0 +1,19 @@
+<header class="text-gray-400 backdrop-blur-md body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a routerLink="/" class="flex title-font font-medium items-center text-white mb-4 md:mb-0 cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Fullstack Projekt</span>
+    </a>
+    <nav class="md:mr-auto md:ml-4 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
+      <a class="mr-2 py-2 px-3 hover:text-white hover:bg-gray-700 rounded-md cursor-pointer transition">First Link</a>
+      <a class="mr-2 py-2 px-3 hover:text-white hover:bg-gray-700 rounded-md cursor-pointer transition">Second Link</a>
+      <a class="mr-2 py-2 px-3 hover:text-white hover:bg-gray-700 rounded-md cursor-pointer transition">Third Link</a>
+      <a class="mr-2 py-2 px-3 hover:text-white hover:bg-gray-700 rounded-md cursor-pointer transition">Fourth Link</a>
+    </nav>
+    <button routerLink="/anmelden" class="mr-2 border-0 py-2 px-3 focus:outline-none hover:text-white hover:bg-gray-700 rounded-md text-base mt-4 md:mt-0 transition">Anmelden</button>
+    <button routerLink="/registrieren" class="text-gray-950 bg-yellow-500 hover:bg-opacity-75 border-0 py-2 px-3 focus:outline-none rounded-md text-base mt-4 md:mt-0 transition">Registrieren</button>
+  </div>
+</header>
+<router-outlet></router-outlet>
