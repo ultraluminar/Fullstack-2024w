@@ -1,0 +1,7 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/ultraluminar/Fullstack-2024w-Backend
+
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/ultraluminar/Fullstack-2024w-Frontend
