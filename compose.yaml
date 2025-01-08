@@ -1,9 +1,10 @@
 services:
-  # frontend:
+  # TODO: frontend:
 
   backend:
     build:
-      context: backend/
+      context: .
+      dockerfile: backend/Dockerfile
     env_file:
       - .env
     depends_on:
@@ -22,4 +23,4 @@ services:
       interval: ${DB_HEALTH_CHECK_INTERVAL}
       timeout: ${DB_HEALTH_CHECK_TIMEOUT}
 
-  # mongodb:
+  # TODO: mongodb:
