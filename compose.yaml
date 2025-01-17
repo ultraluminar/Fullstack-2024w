@@ -17,6 +17,8 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+      mongodb:
+        condition: service_healthy
     ports:
       - ${BACKEND_PORT}:${BACKEND_PORT_INTERNAL}
 
@@ -30,4 +32,13 @@ services:
       interval: ${DB_HEALTH_CHECK_INTERVAL}
       timeout: ${DB_HEALTH_CHECK_TIMEOUT}
 
-  # TODO: mongodb:
+  mongodb:
+    image: mongo:8.0.4
+    env_file:
+      - .env
+    ports:
+      - ${MONGODB_PORT}:${MONGODB_PORT}
+    healthcheck:
+      test: mongosh --eval 'db.runCommand("ping").ok' --quiet
+      interval: ${DB_HEALTH_CHECK_INTERVAL}
+      timeout: ${DB_HEALTH_CHECK_TIMEOUT}
