@@ -31,6 +31,8 @@ services:
       test: pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}
       interval: ${DB_HEALTH_CHECK_INTERVAL}
       timeout: ${DB_HEALTH_CHECK_TIMEOUT}
+    volumes:
+      - ./database/postgres/:/docker-entrypoint-initdb.d/
 
   mongodb:
     image: mongo:8.0.4
@@ -40,3 +42,5 @@ services:
       test: mongosh --eval 'db.runCommand("ping").ok' --quiet
       interval: ${DB_HEALTH_CHECK_INTERVAL}
       timeout: ${DB_HEALTH_CHECK_TIMEOUT}
+    volumes:
+      - ./database/mongodb/:/docker-entrypoint-initdb.d/
