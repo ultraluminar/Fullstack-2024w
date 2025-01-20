@@ -1,0 +1,28 @@
+[{
+	"_id": {
+		"$oid": "678d7336603dbbd01ecdd635"
+	},
+	"id": null,
+	"userId": 1,
+	"loginCouter": 5,
+	"questionsCreated": 0,
+	"questionsUpdated": 0,
+	"questionsDeleted": 0,
+	"answersCreated": 2,
+	"answersUpdated": 0,
+	"answersDeleted": 0
+},
+{
+	"_id": {
+		"$oid": "678d73b0603dbbd01ecdd636"
+	},
+	"id": null,
+	"userId": 2,
+	"loginCouter": 1,
+	"questionsCreated": 1,
+	"questionsUpdated": 0,
+	"questionsDeleted": 0,
+	"answersCreated": 0,
+	"answersUpdated": 0,
+	"answersDeleted": 0
+}]
