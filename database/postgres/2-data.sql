@@ -21,7 +21,7 @@ SET row_security = off;
 -- Data for Name: user; Type: TABLE DATA; Schema: public; Owner: db-user
 --
 
-COPY public."user" (id, "isAdmin", username, password_hash, email, created_at) FROM stdin;
+COPY public."user" (id, "isAdmin", username, password_hash, email, createdAt) FROM stdin;
 1	f	admin	$2b$10$dGB1X48Kr2VlnlBlyXXDd.ezbAtp3HnRU026ohqCpErO0UjsZVe7u	admin@example.com	2025-01-19 21:47:16.083377
 2	f	user1	$2b$10$PWKjAzyH3FzeU5LKa6bYg.wJSPku5.wmEvLrY6nCJLCX3HO1N/h7C	user1@example.com	2025-01-19 21:50:23.078189
 \.
@@ -70,4 +70,3 @@ SELECT pg_catalog.setval('public.user_id_seq', 2, true);
 --
 -- PostgreSQL database dump complete
 --
-

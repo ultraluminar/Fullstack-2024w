@@ -107,7 +107,7 @@ CREATE TABLE public."user" (
     username character varying(30) NOT NULL,
     password_hash character varying NOT NULL,
     email text NOT NULL,
-    created_at timestamp without time zone DEFAULT now() NOT NULL
+    createdAt timestamp without time zone DEFAULT now() NOT NULL
 );
 
 
@@ -207,4 +207,3 @@ ALTER TABLE ONLY public.answer
 --
 -- PostgreSQL database dump complete
 --
-
