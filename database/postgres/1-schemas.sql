@@ -107,7 +107,7 @@ CREATE TABLE public."user" (
     username character varying(30) NOT NULL,
     password_hash character varying NOT NULL,
     email text NOT NULL,
-    createdAt timestamp without time zone DEFAULT now() NOT NULL
+    "createdAt" timestamp without time zone DEFAULT now() NOT NULL
 );
 
 
@@ -185,7 +185,7 @@ ALTER TABLE ONLY public."user"
 --
 
 ALTER TABLE ONLY public.answer
-    ADD CONSTRAINT "FK_5a26907efcd78a856c8af5829e6" FOREIGN KEY ("userId") REFERENCES public."user"(id);
+    ADD CONSTRAINT "FK_5a26907efcd78a856c8af5829e6" FOREIGN KEY ("userId") REFERENCES public."user"(id) ON DELETE CASCADE;
 
 
 --
@@ -193,7 +193,7 @@ ALTER TABLE ONLY public.answer
 --
 
 ALTER TABLE ONLY public.question
-    ADD CONSTRAINT "FK_80f29cc01d0bd1644e389cc13be" FOREIGN KEY ("userId") REFERENCES public."user"(id);
+    ADD CONSTRAINT "FK_80f29cc01d0bd1644e389cc13be" FOREIGN KEY ("userId") REFERENCES public."user"(id) ON DELETE CASCADE;
 
 
 --
@@ -201,9 +201,10 @@ ALTER TABLE ONLY public.question
 --
 
 ALTER TABLE ONLY public.answer
-    ADD CONSTRAINT "FK_a4013f10cd6924793fbd5f0d637" FOREIGN KEY ("questionId") REFERENCES public.question(id);
+    ADD CONSTRAINT "FK_a4013f10cd6924793fbd5f0d637" FOREIGN KEY ("questionId") REFERENCES public.question(id) ON DELETE CASCADE;
 
 
 --
 -- PostgreSQL database dump complete
 --
+
